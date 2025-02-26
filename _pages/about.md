@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>M.Sc</a> Independent researcher
+subtitle: <a href='#'>M.Sc</a>
 
 profile:
   align: right
@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Student of PhD. in Information Sciences and Technologies at the [Universidad Autónoma Metropolitana - Iztapalapa](https://pcyti.izt.uam.mx), I am interested in embedded systems, computer vision, machine learning, reinforment learning.
+Welcome to my site. I am interested in embedded systems, computer vision, machine learning, reinforment learning.
 I am also enthusiastic about programing & electronics.
 
 Outside of computer science, I enjoy playing video games, playing guitar, and simply sightseeing!
