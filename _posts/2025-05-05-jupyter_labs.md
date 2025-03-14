@@ -14,12 +14,6 @@ Creado por el Proyecto Jupyter, JupyterLab sirve para explorar y analizar datos,
 
 1. Actualizar el sistema
 
-````markdown
-```c++
-code code code
-```
-````
-
 ```c++
 sudo apt update
 sudo apt upgrade -y

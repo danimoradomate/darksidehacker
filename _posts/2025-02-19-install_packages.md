@@ -18,8 +18,8 @@ Nuestra meta es instalar la siguiente paqueteria:
         --onnx 1.11.0
         --CuPy 9.2.0
         --numpy 1.19.5
-        -numba 0.53.1
-        -OpenCV 4.5.0 (with CUDA)
+        --numba 0.53.1
+        --OpenCV 4.5.0 (with CUDA)
         --pandas 1.1.5
         --scipy 1.5.4
         --scikit-learn 0.24.2
@@ -81,6 +81,84 @@ Una vez reiniciado esperamos unos minutos y accedemos de nuevo con SSH y verific
 
 ```bash
 jtop
+```
+
+---
+
+OpenCV con soporte CUDA
+
+Los siguientes pasos fueron tomados del excelente trabajo de <a href="https://qengineering.eu/install-opencv-on-jetson-nano.html">Q-Enginering</a>
+
+Revisar Memoria Disponible
+
+```bash
+free -m
+```
+
+Se requieren 6.5 GB! Se recomienda ampliar a 4GB de acuerdo a los siguientes pasos.
+
+```bash
+sudo systemctl disable nvzramconfig
+sudo fallocate -l 4G /mnt/4GB.swap
+sudo mkswap /mnt/4GB.swap
+sudo swapon /mnt/4GB.swap
+```
+
+Abrir fstab
+
+```bash
+sudo vim /etc/fstab
+```
+
+Al final agregar esta línea para que se quede establecido de forma permanente en la Jetson.
+
+/mnt/4GB.swap none swap sw 0 0
+
+Obtener el script de GitHub
+
+```bash
+wget https://github.com/Qengineering/Install-OpenCV-Jetson-Nano/raw/main/OpenCV-4-5-0.sh
+```
+
+Otorgar permisos al script
+
+```bash
+sudo chmod 755 ./OpenCV-4-5-0.sh
+```
+
+Ejecutar
+
+```bash
+./OpenCV-4-5-0.sh
+```
+
+Al terminar
+
+```bash
+rm OpenCV-4-5-0.sh
+```
+
+Limpiar lo que bajamos (Ahorramos 275 GB de espacio)
+
+```bash
+sudo rm -rf ~/opencv
+sudo rm -rf ~/opencv_contrib
+```
+
+---
+
+Instalar numba
+
+```bash
+git clone https://github.com/wjakob/tbb.git
+cd tbb/build
+cmake ..
+make -j
+sudo make install
+sudo apt install llvm-10
+export LLVM_CONFIG=/usr/bin/llvm-config-10
+pip3 install llvmlite
+pip3 install numba
 ```
 
 ---

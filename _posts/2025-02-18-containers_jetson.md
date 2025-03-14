@@ -90,7 +90,6 @@ Eliminar una imagen:
 docker rmi <id_de_la_imagen>
 ```
 
-
 Y ahora para aplicar todo lo que vimos en concreto, aqui un ejemplo tomado del catalogo NGC.
 
 Obtener la imagen JetPack-L4T, la última disponible para hacer ML en la Jetson Nano

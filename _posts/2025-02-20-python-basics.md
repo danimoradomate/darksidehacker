@@ -10,7 +10,6 @@ related_posts: false
 ---
 
 Dejo una pequeña introducción de Python desde tipos de datos hasta slices.
-Mas a
 
 {::nomarkdown}
 {% assign jupyter_path = "assets/jupyter/learn_python.ipynb" | relative_url %}
@@ -22,5 +21,3 @@ Mas a
 <p>Sorry, the notebook you are looking for does not exist.</p>
 {% endif %}
 {:/nomarkdown}
-
-Note that the jupyter notebook supports both light and dark themes.

@@ -65,10 +65,8 @@ Nota: Esta página se estará actualizando constantemente.
 
 #### _Semana 4: Introducción a Jetson Inference y configuración del proyecto_
 
-- Primeros pasos en C++
-- Manipular imagenes con Python
-- Copiar archivos desde la linea de comandos bash con <a href="/blog/2025/scp/"> SCP </a>
-- <a href="/blog/2025/labeling/"> Guía para etiquetar imágenes con makesense</a>
+- Instalación y configuración de Jetson Inference.
+- Primeros pasos con Jetson Inference en C++.
 
 ---
 
@@ -76,7 +74,7 @@ Nota: Esta página se estará actualizando constantemente.
 
 - Captura y procesamiento de imágenes.
 - Uso de videoSource y videoOutput.
-- Entrenamiento de modelos de IA con Google Colab
+- Entrenamiento de modelos 
 
 ---
 
