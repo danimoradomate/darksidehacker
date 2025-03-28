@@ -32,13 +32,6 @@ En esta sección concentraré toda la información que vayamos generando en el c
 
 Nota: Esta página se estará actualizando constantemente.
 
-### Sitios importantes
-
-<ul>
-<li><a href="https://colab.research.google.com/">Google Colab</a></li>
-<li><a href="https://www.makesense.ai/">Make Sense IA</a></li>
-</ul>
-
 #### _Semana 1: Introducción a la Jetson Nano y preparación del entorno_
 
 - Instalar <a href="/blog/2025/setting_up_jetson_nano/">Setting Up Jetson Nano Waveshare</a>
@@ -74,9 +67,8 @@ Nota: Esta página se estará actualizando constantemente.
 
 #### _Semana 5: Procesamiento de imágenes y videos con Jetson Inference_
 
-- Captura y procesamiento de imágenes.
-- Uso de videoSource y videoOutput.
-- Entrenamiento de modelos de IA con Google Colab
+- Captura y procesamiento de imágenes con <a href="https://1drv.ms/f/c/c40aa82ed7ffa253/Ek1aL2T0dpZGhJzbBR-SVtEBvxLoMcX5-PoAEGbvN3gefQ?e=ctDFUu"> OpenCV</a>.
+- Reentrenamiento del modelo SSD en <a href="https://colab.research.google.com/drive/15kkwUZhmAFotynE17IoTQFJwmcLddZSA?usp=sharing"> Google Colab</a>.
 
 ---
 
@@ -98,7 +90,6 @@ Nota: Esta página se estará actualizando constantemente.
 
 #### _Semana 8: Optimización y rendimiento_
 
-- Buenas prácticas de optimización de código.
 - Uso de CUDA y TensorRT
 - Ejercicios prácticos de optimización.
 

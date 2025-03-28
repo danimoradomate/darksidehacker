@@ -26,7 +26,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Welcome to my site. I am interested in embedded systems, computer vision, machine learning, reinforment learning.
-I am also enthusiastic about programing & electronics.
+Welcome to my site. I am a PhD student in Information Sciences and Technologies at UAM, my research interests include embedded systems, computer vision, machine learning algorithms. I am also enthusiastic about programing & electronics.
 
 Outside of computer science, I enjoy playing video games, playing guitar, and simply sightseeing!
