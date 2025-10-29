@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>M.Sc</a>
+subtitle: <a href='https://pcyti.izt.uam.mx/'>M.Sc</a>
 
 profile:
   align: right
   image: gus.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>gustavo@abogadasfm.com</p>
+    <p>flores.gustavo@outlook.es</p>
     <p>Mexico City</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -26,6 +26,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Welcome to my site. I am a PhD student in Information Sciences and Technologies at UAM, my research interests include embedded systems, computer vision, machine learning algorithms. I am also enthusiastic about programing & electronics.
+Welcome to my site. I am a PhD student in Information Sciences and Technologies at <a href='https://www.iztapalapa.uam.mx/'>UAM-I</a> , my research interests include traffic modeling in communication networks, computer vision, reinforcement learning, and autonomous robotic systems. I am also enthusiastic about programming and electronics, especially when it comes to building intelligent systems that interact with the physical world.
 
-Outside of computer science, I enjoy playing video games, playing guitar, and simply sightseeing!
+Outside of work, I like to spend time with my family and friends, exercise, play video games, discovering new things, and travel.

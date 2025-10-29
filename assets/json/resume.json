@@ -2,9 +2,9 @@
   "basics": {
     "name": "Gustavo A. Flores Pérez",
     "label": "M. Sc.",
-    "email": "gustavoflor3s@abogadasfm.com",
+    "email": "flores.gustavo@outlook.es",
     "url": "https://github.com/darksidehacker",
-    "summary": "Specialist in Computing and Applied Artificial Intelligence, mainly focused on Computer Vision models for IoT devices. Experience in pre-sales services and technical support for medical technology, both in companies and hospitals.",
+    "summary": "My focus within Information Technologies has been the development of embedded systems powered by machine learning algorithms, as well as the optimization of their communication processes through teletraffic modeling. \nI am also a Biomedical Engineer, with most of my professional experience dedicated to computing applications in hospital environments, where I worked on integrating technology to improve healthcare operations.",
     "location": {
       "city": "Tlalpan",
       "countryCode": "MX",
@@ -143,5 +143,14 @@
       "language": "English",
       "fluency": "B1 CEFR"
     }
-  ]
+  ],
+  "awards": [
+  {
+    "title": "Diploma al Mérito Universitario",
+    "date": "2024",
+    "awarder": "Universidad Autónoma Metropolitana",
+    "summary": "Awarded for outstanding academic performance during the Master's Degree in Information Science and Technologies."
+  }
+]
 }
+
