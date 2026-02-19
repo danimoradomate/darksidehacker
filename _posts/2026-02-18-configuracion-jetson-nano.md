@@ -118,3 +118,5 @@ Una vez dentro del entorno de Ubuntu, se debe ejecutar el SDK Manager (fig. 7), 
 
 
 
+
+
