@@ -116,3 +116,5 @@ Una vez dentro del entorno de Ubuntu, se debe ejecutar el SDK Manager (fig. 7), 
 
 ![Figura 10 Cap. 2.3: Reinicio y Verificación](/assets/img/image031.png)
 
+
+
