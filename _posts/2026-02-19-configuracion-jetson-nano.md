@@ -1,0 +1,117 @@
+---
+layout: post
+title: "Capitulo 1: Configuracion de tarjeta de desarrollo de Jetson nano"
+date: 2026-02-19 12:00:00-0600
+description: "Configuracion de tarjeta de desarrollo de Jetson nano y flasheo"
+tags: [jetson, tutorial]
+categories: blog
+---
+
+# Capitulo 1: Configuracion de tarjeta de desarrollo de Jetson nano
+
+## 1. Requerimientos 
+
+**A.** Activar el modo desarrollador en la configuración de Windows 11 y habilitar sudo Fig.1.
+
+![Figura 1 Capitulo 2: configuración del sistema](/assets/img/image002.png)
+
+**B.** Ejecución de Windows PowerShell en modo administrador e instalación de WSL 2 (Subsistema de Windows para Linux):
+Conforme a lo ilustrado en la fig. 2, se procede con la habilitación del sistema para, posteriormente, instalar la distribución Ubuntu 18.04 (ver fig. 3). Es fundamental recalcar que el uso de esta versión específica es indispensable para cumplir con los requisitos de compatibilidad técnica sugeridos por NVIDIA.
+
+![Figura 2: Instalación de wsl](/assets/img/image003.png)
+
+![Figura 3 Capitulo 2: instalación de Ubuntu 18.04 LTS](/assets/img/image004.png)
+
+**C.** Configuración de Ubuntu e instalación de SDK Manager: Una vez iniciado Ubuntu desde PowerShell, se debe proceder con la configuración de una nueva contraseña de usuario (fig. 4). Posteriormente, se localiza el instalador de SDK Manager mediante el navegador para descargar el paquete en formato .deb (fig. 5) y se finaliza el proceso mediante la instalación de dicha herramienta dentro del entorno Linux, tal como se detalla en la fig. 6.
+
+![Figura 4 Capitulo 2: configuraciones de Ubuntu](/assets/img/image005.png)
+
+![Figura 5 capitulo 2: Descarga del archivo .dev](/assets/img/image006.png)
+
+![Figura 6 capitulo 2: Búsqueda e instalación](/assets/img/image007.png)
+
+**Nota:** Si llega a tener problemas para instalar la versión 18.04 de Ubuntu abrir Microsoft Store figura 7
+
+![Figura 7 Capitulo 2: instalación desde Microsoft store](/assets/img/image008.png)
+
+---
+
+## Flasheo de la Jetson Nano
+
+**Conexión de la Jetson Nano en modo de recuperación:** En esta etapa, se debe conectar la placa Jetson Nano mediante un cable micro-USB, asegurándose de realizar previamente el puente (jumper) entre los pines 9 y 10 para habilitar el modo de fuerza de recuperación (fig. 1). Posteriormente, es necesario verificar el estado de la conexión en el Administrador de dispositivos (fig. 2), donde el equipo debe ser reconocido bajo la etiqueta APX; cabe señalar que el reconocimiento es válido aun si el dispositivo se muestra con un ícono de advertencia.
+
+![Figura 1 Capitulo 2.1: Puente de los pines 9 y 10](/assets/img/image009.png)
+
+![Figura 2 Capitulo 2.1: Administrador de dispositivos](/assets/img/image010.png)
+
+**Nota: Instalación de usbipd para la gestión de dispositivos USB:** En caso de presentarse errores de reconocimiento o conectividad en Windows PowerShell, se recomienda proceder con la instalación de la herramienta usbipd, tal como se ilustra en la figura 6 Capitulo 2. Esta utilidad permite el redireccionamiento correcto de los dispositivos USB desde el sistema anfitrión hacia el entorno de WSL 2.
+
+**Instalación y configuración de usbipd:**
+Este software permite compartir dispositivos USB conectados localmente con otras máquinas o entornos virtuales. El procedimiento de instalación se detalla en la fig. 4 y el repositorio oficial para su descarga se obtiene desde la plataforma GitHub.
+
+![Figura 3 Capitulo 2.1: errores de sin USBIPD](/assets/img/image011.png)
+
+![Figura 4 Capitulo 2.1: Insalacion de USBIPD](/assets/img/image012.png)
+
+**Vinculación del dispositivo mediante usbipd:** Una vez completada la instalación, se utiliza el comando usbipd list para identificar los dispositivos conectados (fig. 5). Posteriormente, se ejecuta usbipd bind --busid 1-3 para habilitar el puente con la Jetson Nano, identificada bajo el BUSID correspondiente al dispositivo APX. Finalmente, tras iniciar Ubuntu 18.04 desde PowerShell (fig. 6), se establece la conexión directa con el entorno de WSL mediante el comando usbipd attach --wsl --busid 1-3, como se detalla en la fig. 5.
+
+![Figura 5 Capitulo 2.1: Vinculamos la tarjeta de desarrollo Jetson nano con Ubuntu 18.04 y a su puerto de entrada](/assets/img/image013.png)
+
+![Figura 6 Capitulo 2.1: Abrimos la distribución Linux](/assets/img/image014.png)
+
+**Configuración y flasheo en SDK Manager:**
+Una vez dentro del entorno de Ubuntu, se debe ejecutar el SDK Manager (fig. 7), el cual detectará de manera automática la placa Jetson conectada. Posteriormente, se selecciona la opción Jetson Nano Developer Kit en el menú de configuración (fig. 8) para proceder con el flasheo del sistema operativo y los componentes de desarrollo.
+
+![Figura 7 Capitulo 2.1: Abrir sdk manager](/assets/img/image015.png)
+
+![Figura 8 Capitulo 2.1: Selección de Jetson Nano developer Kit version](/assets/img/image016.png)
+
+**Selección de componentes y configuración de credenciales:** Debido a las limitaciones de almacenamiento del dispositivo, es necesario omitir la instalación de la suite completa de paquetes de NVIDIA. En la interfaz del SDK Manager, seleccione únicamente las opciones indicadas en la fig. 9 y proceda a continuar; posteriormente, asegúrese de desmarcar todos los componentes correspondientes a Jetson SDK (fig. 10). Si el sistema solicita una contraseña durante este proceso, deberá ingresar la clave del WSL (Subsistema de Windows para Linux) creada previamente. Finalmente, en el Paso 3 (fig. 11), se procederá con la asignación de un usuario y contraseña para la Jetson Nano, configuración que podrá completarse una vez que se instalen los componentes restantes.
+
+![Figura 9 Capitulo 2.1: selección de opciones](/assets/img/image017.png)
+
+**Finalización del flasheo:** Por el momento, es posible seleccionar la opción Skip para continuar. Al concluir el Paso 4, el sistema deberá confirmar una instalación exitosa (fig. 12), lo cual indica que el proceso de flasheo de la Jetson Nano se ha completado correctamente.
+
+![Figura 10 Capitulo 2.1: paquetes a instalar](/assets/img/image018.png)
+
+![Figura 11 Capitulo 2.1: Paso 3](/assets/img/image019.png)
+
+![Figura 12 Capitulo 2.1: Instalación completada](/assets/img/image020.png)
+
+---
+
+## Implementación de almacenamiento externo booteable en tarjeta de desarrollo Jetson nano
+
+**Expansión del almacenamiento y actualización del entorno:** Esta etapa tiene como objetivo principal incrementar la capacidad de almacenamiento nativo de la Jetson Nano para permitir la instalación de componentes críticos del SDK, tales como CUDA, librerías multimedia y contenedores de NVIDIA. Para comenzar, retire el puente entre los pines 9 y 10 colocado anteriormente. Posteriormente, conecte los periféricos necesarios: teclado, mouse, adaptador de corriente y una unidad de almacenamiento USB (se recomienda una memoria de al menos 128GB Clase 10 para garantizar el rendimiento óptimo del sistema). Al iniciar el sistema, omita las configuraciones iniciales de atajos de teclado y actualizaciones automáticas. Acceda directamente a la terminal y ejecute los comandos sudo apt update y sudo apt upgrade para sincronizar los repositorios. Finalmente, diríjase al menú de aplicaciones y seleccione la utilidad Disks (fig. 1) para gestionar la expansión del almacenamiento.
+
+![Figura 1 Cap. 2.2:Abrimos Disks](/assets/img/image021.png)
+
+**Configuración y particionamiento de la unidad de almacenamiento:** Seleccione la unidad externa que se utilizará como expansión y acceda al icono de configuración (engranaje) ubicado debajo del esquema de particiones (fig. 2). Al elegir la opción de formateo, configure los parámetros según se indica en la fig. 3 y confirme la operación. Posteriormente, seleccione la opción de añadir partición ([+]) (fig. 2) y cree un nuevo volumen, reservando un margen de 14 GB de espacio libre (fig. 4). Una vez definida la capacidad, asigne un nombre a la partición y marque la opción Internal Disk (fig. 5). Si el procedimiento se ha realizado correctamente, el estado final de la unidad deberá coincidir con lo mostrado en la fig. 6; es fundamental tomar nota del nombre asignado al volumen para los pasos posteriores.
+
+![Figura 2 Cap. 2.3: Engrane y símbolo de “+”](/assets/img/image022.png)
+
+![Figura 3 Cap. 2.3: Opciones para formatear](/assets/img/image023.png)
+
+![Figura 4 Cap. 2.3: Partición](/assets/img/image024.png)
+
+![Figura 5 Cap. 2.3: Configuración de la partición](/assets/img/image025.png)
+
+![Figura 6 Cap. 2.3: Configuración de la USB](/assets/img/image026.png)
+
+**Configuración mediante terminal:** Una vez finalizada la gestión de los volúmenes, acceda a la terminal del sistema y ejecute las siguientes líneas de comandos para proceder con la vinculación y el montaje de la nueva unidad:
+
+![Figura/comandos 1 Cap. 2.3: comandos](/assets/img/image027.png)
+
+**Modificación del archivo de arranque del sistema:** Tras completar las operaciones anteriores, utilice el comando clear para limpiar la terminal y proceda a editar el archivo de configuración de arranque. Para ello, ejecute el comando sudo nano /boot/extlinux/extlinux.conf, tal como se ilustra en la fig. 7. Esta modificación es necesaria para redirigir el inicio del sistema hacia la nueva unidad de almacenamiento configurada.
+
+![Figura 7 Cap. 2.3: Abrimos el archivo de arranque](/assets/img/image028.png)
+
+**Edición del archivo de arranque y redirección del sistema:** Proceda a eliminar el contenido actual del archivo de configuración para reemplazarlo por los parámetros indicados en la fig. 8. Es indispensable verificar que el identificador del dispositivo coincida con la ruta /dev/sda1; en caso de que el sistema haya asignado una nomenclatura distinta, deberá realizar el ajuste correspondiente en la sección resaltada de la fig. 9. Finalmente, para aplicar los cambios, guarde el archivo mediante la combinación de teclas Ctrl+O y cierre el editor con Ctrl+X.
+
+![Figura 8 Cap. 2.3: Archivo de arranque](/assets/img/image029.png)
+
+![Figura 9 Cap. 2.3: Modificación del archivo](/assets/img/image030.png)
+
+**Reinicio y verificación del sistema:** Proceda a reiniciar la Jetson Nano para aplicar las modificaciones. Una vez que el sistema inicie, se deberá visualizar el icono de una tarjeta SD en el escritorio, lo cual confirma que las configuraciones de redirección de almacenamiento se han ejecutado correctamente (fig. 10).
+
+![Figura 10 Cap. 2.3: Reinicio y Verificación](/assets/img/image031.png)
