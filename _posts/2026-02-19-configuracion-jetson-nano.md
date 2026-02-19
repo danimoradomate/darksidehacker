@@ -115,3 +115,4 @@ Una vez dentro del entorno de Ubuntu, se debe ejecutar el SDK Manager (fig. 7), 
 **Reinicio y verificación del sistema:** Proceda a reiniciar la Jetson Nano para aplicar las modificaciones. Una vez que el sistema inicie, se deberá visualizar el icono de una tarjeta SD en el escritorio, lo cual confirma que las configuraciones de redirección de almacenamiento se han ejecutado correctamente (fig. 10).
 
 ![Figura 10 Cap. 2.3: Reinicio y Verificación](/assets/img/image031.png)
+
