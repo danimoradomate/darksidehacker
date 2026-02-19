@@ -1,6 +1,4 @@
 ---
----
----
 layout: post
 title: "Capítulo 1: Configuración de tarjeta de desarrollo de Jetson nano"
 date: 2026-02-18 12:00:00
@@ -10,8 +8,6 @@ categories: blog
 featured: true
 related_posts: false
 giscus_comments: false
----
----
 ---
 
 # Capitulo 1: Configuracion de tarjeta de desarrollo de Jetson nano
