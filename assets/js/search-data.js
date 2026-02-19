@@ -51,11 +51,11 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "post-configuracion-jetson-nano",
+            },{id: "post-capítulo-1-configuración-de-tarjeta-de-desarrollo-de-jetson-nano",
       
-        title: "Configuracion Jetson Nano",
+        title: "Capítulo 1: Configuración de tarjeta de desarrollo de Jetson nano",
       
-      description: "",
+      description: "Configuración de tarjeta de desarrollo de Jetson nano y flasheo",
       section: "Posts",
       handler: () => {
         
