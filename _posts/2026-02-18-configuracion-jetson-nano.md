@@ -1,11 +1,16 @@
 ---
 ---
+---
 layout: post
-title: "Capitulo 1: Configuracion de tarjeta de desarrollo de Jetson nano"
-date: 2026-02-18 12:00:00 -0600
-description: "Configuracion de tarjeta de desarrollo de Jetson nano y flasheo"
+title: "Capítulo 1: Configuración de tarjeta de desarrollo de Jetson nano"
+date: 2026-02-18 12:00:00
+description: "Configuración de tarjeta de desarrollo de Jetson nano y flasheo"
 tags: [jetson, tutorial]
-published: true
+categories: blog
+featured: true
+related_posts: false
+giscus_comments: false
+---
 ---
 ---
 
