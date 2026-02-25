@@ -51,7 +51,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "post-capítulo-1-configuración-de-tarjeta-de-desarrollo-de-jetson-nano",
+            },{id: "post-capítulo-2-instalación-de-jetson-sdk-components",
+      
+        title: "Capítulo 2: Instalación de Jetson SDK Components",
+      
+      description: "Guía para la instalación de componentes del SDK en la Jetson Nano",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2026/capitulo-2-instalacion-jetson-sdk/";
+        
+      },
+    },{id: "post-capítulo-1-configuración-de-tarjeta-de-desarrollo-de-jetson-nano",
       
         title: "Capítulo 1: Configuración de tarjeta de desarrollo de Jetson nano",
       
